@@ -1,0 +1,10 @@
+<resources>
+    <color name="orange_primary">#FF0000</color>
+    <color name="orange_variant">#FF0000</color>
+    <color name="blue_secondary">#003366</color>
+    <color name="white">#FFFFFF</color>
+    <color name="charcoal_background">#fdfffc</color>
+    <color name="text_on_primary">#242423</color>
+    <color name="text_on_secondary">#242423</color>
+    <color name="teal_700">#00796B</color>
+</resources>

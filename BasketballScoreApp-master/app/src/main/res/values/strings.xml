@@ -1,0 +1,66 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">BasketballScoreApp</string>
+
+    <!-- Placeholder Texts -->
+    <string name="quarter_placeholder">Quarter: %1$d</string>
+    <string name="fouls_placeholder">Fouls: %1$d</string>
+    <string name="points_placeholder">Points: %1$d</string>
+    <string name="winner_placeholder">Winner: %1$s</string>
+    <string name="average_stats_placeholder">%s Average: %d pts | Fouls Avg: %d \n
+        %s Average: %d pts | Fouls Avg: %d</string>
+    <string name="stats_placeholder">%s: Points: %d, Fouls: %d</string>
+    <string name="total_time_played_placeholder">Total Time Played: %d minutes</string>
+    <string name="points_difference_placeholder">Points Difference: %1$d</string>
+    <string name="full_game_stats_placeholder">
+    %1$s: %2$d Points, %3$d Fouls \n
+    %4$s: %5$d Points, %6$d Fouls \n
+    Point Difference: %7$d
+</string>
+
+    <!-- Labels -->
+    <string name="statistics_title">Game Statistics</string>
+    <string name="winner_tbd">Winner: TBD</string>
+    <string name="average_stats_label">Average Stats:</string>
+
+    <!-- Buttons -->
+    <string name="back_to_setup">Back to Setup</string>
+    <string name="start_next_quarter">Start Next Quarter</string>
+    <string name="increment_foul">Foul</string>
+    <string name="minus_one">-1</string>
+
+    <!-- Defaults -->
+    <string name="default_timer">00:00</string>
+    <string name="default_shot_clock">24</string>
+    <string name="no_games_found">No games found.</string>
+    <string name="default_team_a">Team A</string>
+    <string name="default_team_b">Team B</string>
+    <string name="default_team_a_stats">Points: 0&#10;Fouls: 0</string>
+    <string name="default_team_b_stats">Points: 0&#10;Fouls: 0</string>
+    <string name="default_average_stats">Team A: 0 pts, 0 fouls&#10;Team B: 0 pts, 0 fouls</string>
+    <string name="team_a_stats_label">Team A Stats</string>
+    <string name="team_b_stats_label">Team B Stats</string>
+    <string name="default_points_difference">Points Difference: TBD</string>
+    <string name="default_time_played">Time Played: TBD</string>
+    <string name="default_cumulative_stats">%s: %d points | %s: %d points | Difference: %d</string>
+
+
+
+
+    <!-- Dynamic Results -->
+    <string name="its_a_draw">It is a Draw!</string>
+    <string name="winner">Winner:</string>
+
+    <!-- Additional Labels -->
+    <string name="game_title">Game: %1$s vs %2$s</string>
+    <string name="save_success">Game saved successfully!</string>
+    <string name="no_stats_available">No statistics available for this game.</string>
+    <string name="no_winner">No winner available.</string>
+    <string name="view_details">view details</string>
+    <string name="hide_details">hiden stats\n</string>
+    <string name="fouls_label">Fouls: %d</string>
+    <string name="quarter_label">Quarter: %d</string>
+    <string name="timer_default">00:00</string>
+    <string name="shot_clock_default">24</string>
+
+</resources>

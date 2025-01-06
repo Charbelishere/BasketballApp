@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/charcoal_background"
+    tools:context=".GameFragment">
+
+    <!-- Timer Section -->
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="64sp"
+        android:fontFamily="monospace"
+        android:textColor="@color/orange_primary"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Current Quarter -->
+    <TextView
+        android:id="@+id/currentQuarter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quarter: 1"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/blue_secondary"
+        app:layout_constraintTop_toBottomOf="@id/timer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Shot Clock -->
+    <TextView
+        android:id="@+id/shotClockTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24"
+        android:textSize="40sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/blue_secondary"
+        app:layout_constraintTop_toBottomOf="@id/currentQuarter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Reset Shot Clock Button -->
+    <Button
+        android:id="@+id/resetShotClockButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset 24s"
+        android:backgroundTint="@color/orange_primary"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/shotClockTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Pause and Continue Timer Section -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resetShotClockButton">
+
+        <Button
+            android:id="@+id/continueTimerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange_primary"
+            android:text="Continue"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Team A Section -->
+    <TextView
+        android:id="@+id/teamAName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_secondary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/teamAFouls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fouls: 0"
+        android:textSize="16sp"
+        android:textColor="@color/blue_secondary"
+        app:layout_constraintTop_toBottomOf="@id/teamAName"
+        app:layout_constraintStart_toStartOf="@id/teamAName" />
+
+    <TextView
+        android:id="@+id/teamAScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_secondary"
+        app:layout_constraintTop_toBottomOf="@id/teamAFouls"
+        app:layout_constraintStart_toStartOf="@id/teamAName" />
+
+    <!-- Buttons for Team A -->
+
+    <Button
+        android:id="@+id/plusOneTeamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:backgroundTint="@color/orange_primary"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/teamAScore"
+        app:layout_constraintStart_toStartOf="@id/teamAScore"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/plusTwoTeamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/orange_primary"
+        android:text="+2"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/teamAScore"
+        app:layout_constraintTop_toBottomOf="@id/teamAScore" />
+
+    <Button
+        android:id="@+id/plusThreeTeamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+3"
+        android:backgroundTint="@color/orange_primary"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/plusTwoTeamA"
+        app:layout_constraintStart_toStartOf="@id/plusTwoTeamA"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/minusOneTeamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        android:backgroundTint="@color/orange_variant"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/plusThreeTeamA"
+        app:layout_constraintStart_toStartOf="@id/plusThreeTeamA"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/incrementTeamAFoul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foul"
+        android:backgroundTint="@color/orange_variant"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/minusOneTeamA"
+        app:layout_constraintStart_toStartOf="@id/minusOneTeamA"
+        android:layout_marginTop="8dp" />
+
+    <!-- Team B Section -->
+    <TextView
+        android:id="@+id/teamBName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/teamBFouls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fouls: 0"
+        android:textSize="16sp"
+        android:textColor="@color/orange_primary"
+        app:layout_constraintTop_toBottomOf="@id/teamBName"
+        app:layout_constraintEnd_toEndOf="@id/teamBName" />
+
+    <TextView
+        android:id="@+id/teamBScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange_primary"
+        app:layout_constraintTop_toBottomOf="@id/teamBFouls"
+        app:layout_constraintEnd_toEndOf="@id/teamBName" />
+
+    <!-- Buttons for Team B -->
+
+    <Button
+        android:id="@+id/plusTwoTeamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/orange_primary"
+        android:text="+2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/teamBScore"
+        app:layout_constraintTop_toBottomOf="@+id/plusOneTeamB" />
+
+    <Button
+        android:id="@+id/incrementTeamBFoul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/orange_variant"
+        android:text="Foul"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/minusOneTeamB"
+        app:layout_constraintTop_toBottomOf="@id/minusOneTeamB" />
+
+    <Button
+        android:id="@+id/minusOneTeamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/orange_variant"
+        android:text="-1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/plusThreeTeamB"
+        app:layout_constraintTop_toBottomOf="@id/plusThreeTeamB" />
+
+    <Button
+        android:id="@+id/plusOneTeamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/orange_primary"
+        android:text="+1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/teamBScore"
+        app:layout_constraintTop_toBottomOf="@id/teamBScore" />
+
+    <Button
+        android:id="@+id/plusThreeTeamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/orange_primary"
+        android:text="+3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/plusTwoTeamB"
+        app:layout_constraintTop_toBottomOf="@id/plusTwoTeamB" />
+
+    <!-- View Statistics and End Game Buttons -->
+
+    <Button
+        android:id="@+id/viewStatisticsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/orange_primary"
+        android:text="View Statistics"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/endGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/endGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="@color/orange_variant"
+        android:text="End Game"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Next Quarter Section -->
+
+    <TextView
+        android:id="@+id/nextQuarterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start the next quarter"
+        android:textColor="@color/blue_secondary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/viewStatisticsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pauseTimerButton"
+        app:layout_constraintVertical_bias="0.659" />
+
+    <Button
+        android:id="@+id/startNextQuarterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/orange_primary"
+        android:text="Start"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/viewStatisticsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nextQuarterText" />
+
+    <Button
+        android:id="@+id/pauseTimerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/orange_variant"
+        android:text="Pause"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

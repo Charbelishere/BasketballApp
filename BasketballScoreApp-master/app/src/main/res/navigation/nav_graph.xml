@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/setupFragment">
+
+    <!-- Setup Fragment -->
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.example.basketballscoreapp.SetupFragment"
+        android:label="Setup"
+        tools:layout="@layout/fragment_setup">
+        <action
+            android:id="@+id/action_setupFragment_to_gameFragment"
+            app:destination="@id/gameFragment">
+            <!-- Pass arguments from SetupFragment to GameFragment -->
+            <argument
+                android:name="teamA"
+                app:argType="string" />
+            <argument
+                android:name="teamB"
+                app:argType="string" />
+            <argument
+                android:name="quarters"
+                app:argType="integer" />
+            <argument
+                android:name="timePerQuarter"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_setupFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+
+    <!-- Game Fragment -->
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.basketballscoreapp.GameFragment"
+        android:label="Game"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+
+    <!-- Statistics Fragment -->
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.basketballscoreapp.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics">
+        <argument
+            android:name="teamAStats"
+            app:argType="string" />
+        <argument
+            android:name="teamBStats"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_statisticsFragment_to_setupFragment"
+            app:destination="@id/setupFragment" />
+    </fragment>
+</navigation>
